@@ -1,0 +1,578 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>camel.agents.role_playing &#8212; Camel 0.1.0 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/camel/agents/role_playing';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">Camel 0.1.0 documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../modules.html">camel</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../camel.html">camel package</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../camel.agents.html">camel.agents package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../camel.prompts.html">camel.prompts package</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <h1>Source code for camel.agents.role_playing</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Tuple</span>
+
+<span class="kn">from</span> <span class="nn">camel.agents</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">ChatAgent</span><span class="p">,</span>
+    <span class="n">CriticAgent</span><span class="p">,</span>
+    <span class="n">TaskPlannerAgent</span><span class="p">,</span>
+    <span class="n">TaskSpecifyAgent</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="kn">from</span> <span class="nn">camel.generators</span> <span class="kn">import</span> <span class="n">SystemMessageGenerator</span>
+<span class="kn">from</span> <span class="nn">camel.human</span> <span class="kn">import</span> <span class="n">Human</span>
+<span class="kn">from</span> <span class="nn">camel.messages</span> <span class="kn">import</span> <span class="n">AssistantChatMessage</span><span class="p">,</span> <span class="n">ChatMessage</span><span class="p">,</span> <span class="n">UserChatMessage</span>
+<span class="kn">from</span> <span class="nn">camel.typing</span> <span class="kn">import</span> <span class="n">ModelType</span><span class="p">,</span> <span class="n">RoleType</span><span class="p">,</span> <span class="n">TaskType</span>
+
+
+<div class="viewcode-block" id="RolePlaying"><a class="viewcode-back" href="../../../camel.agents.html#camel.agents.role_playing.RolePlaying">[docs]</a><span class="k">class</span> <span class="nc">RolePlaying</span><span class="p">:</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Role playing between two agents.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        assistant_role_name (str): The name of the role played by the</span>
+<span class="sd">            assistant.</span>
+<span class="sd">        user_role_name (str): The name of the role played by the user.</span>
+<span class="sd">        critic_role_name (str): The name of the role played by the critic.</span>
+<span class="sd">            (default: :obj:`&quot;critic&quot;`)</span>
+<span class="sd">        task_prompt (str, optional): A prompt for the task to be performed.</span>
+<span class="sd">            (default: :obj:`&quot;&quot;`)</span>
+<span class="sd">        with_task_specify (bool, optional): Whether to use a task specify</span>
+<span class="sd">            agent. (default: :obj:`True`)</span>
+<span class="sd">        with_task_planner (bool, optional): Whether to use a task planner</span>
+<span class="sd">            agent. (default: :obj:`False`)</span>
+<span class="sd">        with_critic_in_the_loop (bool, optional): Whether to include a critic</span>
+<span class="sd">            in the loop. (default: :obj:`False`)</span>
+<span class="sd">        mode_type (ModelType, optional): The type of GPT model to use.</span>
+<span class="sd">            (default: :obj:`ModelType.GPT_3_5_TURBO`)</span>
+<span class="sd">        task_type (TaskType, optional): The type of task to perform.</span>
+<span class="sd">            (default: :obj:`TaskType.AI_SOCIETY`)</span>
+<span class="sd">        assistant_agent_kwargs (Dict, optional): Additional arguments to pass</span>
+<span class="sd">            to the assistant agent. (default: :obj:`None`)</span>
+<span class="sd">        user_agent_kwargs (Dict, optional): Additional arguments to pass to</span>
+<span class="sd">            the user agent. (default: :obj:`None`)</span>
+<span class="sd">        task_specify_agent_kwargs (Dict, optional): Additional arguments to</span>
+<span class="sd">            pass to the task specify agent. (default: :obj:`None`)</span>
+<span class="sd">        task_planner_agent_kwargs (Dict, optional): Additional arguments to</span>
+<span class="sd">            pass to the task planner agent. (default: :obj:`None`)</span>
+<span class="sd">        critic_kwargs (Dict, optional): Additional arguments to pass to the</span>
+<span class="sd">            critic. (default: :obj:`None`)</span>
+<span class="sd">        sys_msg_generator_kwargs (Dict, optional): Additional arguments to</span>
+<span class="sd">            pass to the system message generator. (default: :obj:`None`)</span>
+<span class="sd">        extend_sys_msg_meta_dicts (List[Dict], optional): A list of dicts to</span>
+<span class="sd">            extend the system message meta dicts with. (default: :obj:`None`)</span>
+<span class="sd">        extend_task_specify_meta_dict (Dict, optional): A dict to extend the</span>
+<span class="sd">            task specify meta dict with. (default: :obj:`None`)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">assistant_role_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">user_role_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">critic_role_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;critic&quot;</span><span class="p">,</span>
+        <span class="n">task_prompt</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="n">with_task_specify</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="n">with_task_planner</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">with_critic_in_the_loop</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">critic_criteria</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">mode_type</span><span class="p">:</span> <span class="n">ModelType</span> <span class="o">=</span> <span class="n">ModelType</span><span class="o">.</span><span class="n">GPT_3_5_TURBO</span><span class="p">,</span>
+        <span class="n">task_type</span><span class="p">:</span> <span class="n">TaskType</span> <span class="o">=</span> <span class="n">TaskType</span><span class="o">.</span><span class="n">AI_SOCIETY</span><span class="p">,</span>
+        <span class="n">assistant_agent_kwargs</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">user_agent_kwargs</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">task_specify_agent_kwargs</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">task_planner_agent_kwargs</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">critic_kwargs</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">sys_msg_generator_kwargs</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">extend_sys_msg_meta_dicts</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">Dict</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">extend_task_specify_meta_dict</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">with_task_specify</span> <span class="o">=</span> <span class="n">with_task_specify</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">with_task_planner</span> <span class="o">=</span> <span class="n">with_task_planner</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">with_critic_in_the_loop</span> <span class="o">=</span> <span class="n">with_critic_in_the_loop</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mode_type</span> <span class="o">=</span> <span class="n">mode_type</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">task_type</span> <span class="o">=</span> <span class="n">task_type</span>
+
+        <span class="k">if</span> <span class="n">with_task_specify</span><span class="p">:</span>
+            <span class="n">task_specify_meta_dict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">task_type</span> <span class="ow">in</span> <span class="p">[</span><span class="n">TaskType</span><span class="o">.</span><span class="n">AI_SOCIETY</span><span class="p">,</span> <span class="n">TaskType</span><span class="o">.</span><span class="n">MISALIGNMENT</span><span class="p">]:</span>
+                <span class="n">task_specify_meta_dict</span><span class="o">.</span><span class="n">update</span><span class="p">(</span>
+                    <span class="nb">dict</span><span class="p">(</span><span class="n">assistant_role</span><span class="o">=</span><span class="n">assistant_role_name</span><span class="p">,</span>
+                         <span class="n">user_role</span><span class="o">=</span><span class="n">user_role_name</span><span class="p">))</span>
+            <span class="k">if</span> <span class="n">extend_task_specify_meta_dict</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">task_specify_meta_dict</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">extend_task_specify_meta_dict</span><span class="p">)</span>
+
+            <span class="n">task_specify_agent</span> <span class="o">=</span> <span class="n">TaskSpecifyAgent</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">mode_type</span><span class="p">,</span>
+                <span class="n">task_type</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">task_type</span><span class="p">,</span>
+                <span class="o">**</span><span class="p">(</span><span class="n">task_specify_agent_kwargs</span> <span class="ow">or</span> <span class="p">{}),</span>
+            <span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">specified_task_prompt</span> <span class="o">=</span> <span class="n">task_specify_agent</span><span class="o">.</span><span class="n">step</span><span class="p">(</span>
+                <span class="n">task_prompt</span><span class="p">,</span>
+                <span class="n">meta_dict</span><span class="o">=</span><span class="n">task_specify_meta_dict</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="n">task_prompt</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">specified_task_prompt</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">specified_task_prompt</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="k">if</span> <span class="n">with_task_planner</span><span class="p">:</span>
+            <span class="n">task_planner_agent</span> <span class="o">=</span> <span class="n">TaskPlannerAgent</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">mode_type</span><span class="p">,</span>
+                <span class="o">**</span><span class="p">(</span><span class="n">task_planner_agent_kwargs</span> <span class="ow">or</span> <span class="p">{}),</span>
+            <span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">planned_task_prompt</span> <span class="o">=</span> <span class="n">task_planner_agent</span><span class="o">.</span><span class="n">step</span><span class="p">(</span><span class="n">task_prompt</span><span class="p">)</span>
+            <span class="n">task_prompt</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">task_prompt</span><span class="si">}</span><span class="se">\n</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">planned_task_prompt</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">planned_task_prompt</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">task_prompt</span> <span class="o">=</span> <span class="n">task_prompt</span>
+
+        <span class="n">sys_msg_generator</span> <span class="o">=</span> <span class="n">SystemMessageGenerator</span><span class="p">(</span>
+            <span class="n">task_type</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">task_type</span><span class="p">,</span> <span class="o">**</span><span class="p">(</span><span class="n">sys_msg_generator_kwargs</span> <span class="ow">or</span> <span class="p">{}))</span>
+
+        <span class="n">sys_msg_meta_dicts</span> <span class="o">=</span> <span class="p">[</span><span class="nb">dict</span><span class="p">(</span><span class="n">task</span><span class="o">=</span><span class="n">task_prompt</span><span class="p">)]</span> <span class="o">*</span> <span class="mi">2</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">extend_sys_msg_meta_dicts</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">task_type</span>
+                <span class="ow">in</span> <span class="p">[</span><span class="n">TaskType</span><span class="o">.</span><span class="n">AI_SOCIETY</span><span class="p">,</span> <span class="n">TaskType</span><span class="o">.</span><span class="n">MISALIGNMENT</span><span class="p">]):</span>
+            <span class="n">extend_sys_msg_meta_dicts</span> <span class="o">=</span> <span class="p">[</span>
+                <span class="nb">dict</span><span class="p">(</span><span class="n">assistant_role</span><span class="o">=</span><span class="n">assistant_role_name</span><span class="p">,</span>
+                     <span class="n">user_role</span><span class="o">=</span><span class="n">user_role_name</span><span class="p">)</span>
+            <span class="p">]</span> <span class="o">*</span> <span class="mi">2</span>
+        <span class="k">if</span> <span class="n">extend_sys_msg_meta_dicts</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">sys_msg_meta_dicts</span> <span class="o">=</span> <span class="p">[{</span>
+                <span class="o">**</span><span class="n">sys_msg_meta_dict</span><span class="p">,</span>
+                <span class="o">**</span><span class="n">extend_sys_msg_meta_dict</span>
+            <span class="p">}</span> <span class="k">for</span> <span class="n">sys_msg_meta_dict</span><span class="p">,</span> <span class="n">extend_sys_msg_meta_dict</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span>
+                <span class="n">sys_msg_meta_dicts</span><span class="p">,</span> <span class="n">extend_sys_msg_meta_dicts</span><span class="p">)]</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">assistant_sys_msg</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">user_sys_msg</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="n">sys_msg_generator</span><span class="o">.</span><span class="n">from_dicts</span><span class="p">(</span>
+                <span class="n">meta_dicts</span><span class="o">=</span><span class="n">sys_msg_meta_dicts</span><span class="p">,</span>
+                <span class="n">role_tuples</span><span class="o">=</span><span class="p">[</span>
+                    <span class="p">(</span><span class="n">assistant_role_name</span><span class="p">,</span> <span class="n">RoleType</span><span class="o">.</span><span class="n">ASSISTANT</span><span class="p">),</span>
+                    <span class="p">(</span><span class="n">user_role_name</span><span class="p">,</span> <span class="n">RoleType</span><span class="o">.</span><span class="n">USER</span><span class="p">),</span>
+                <span class="p">],</span>
+            <span class="p">))</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">assistant_agent</span> <span class="o">=</span> <span class="n">ChatAgent</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">assistant_sys_msg</span><span class="p">,</span>
+            <span class="n">mode_type</span><span class="p">,</span>
+            <span class="o">**</span><span class="p">(</span><span class="n">assistant_agent_kwargs</span> <span class="ow">or</span> <span class="p">{}),</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">user_agent</span> <span class="o">=</span> <span class="n">ChatAgent</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">user_sys_msg</span><span class="p">,</span>
+            <span class="n">mode_type</span><span class="p">,</span>
+            <span class="o">**</span><span class="p">(</span><span class="n">user_agent_kwargs</span> <span class="ow">or</span> <span class="p">{}),</span>
+        <span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">with_critic_in_the_loop</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">critic_role_name</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;human&quot;</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">critic</span> <span class="o">=</span> <span class="n">Human</span><span class="p">(</span><span class="o">**</span><span class="p">(</span><span class="n">critic_kwargs</span> <span class="ow">or</span> <span class="p">{}))</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">critic_criteria</span> <span class="o">=</span> <span class="p">(</span><span class="n">critic_criteria</span>
+                                   <span class="ow">or</span> <span class="s2">&quot;improving the task performance&quot;</span><span class="p">)</span>
+                <span class="n">critic_msg_meta_dict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">critic_role</span><span class="o">=</span><span class="n">critic_role_name</span><span class="p">,</span>
+                                            <span class="n">criteria</span><span class="o">=</span><span class="n">critic_criteria</span><span class="p">,</span>
+                                            <span class="o">**</span><span class="n">sys_msg_meta_dicts</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">critic_sys_msg</span> <span class="o">=</span> <span class="n">sys_msg_generator</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span>
+                    <span class="n">critic_msg_meta_dict</span><span class="p">,</span>
+                    <span class="n">role_tuple</span><span class="o">=</span><span class="p">(</span><span class="n">critic_role_name</span><span class="p">,</span> <span class="n">RoleType</span><span class="o">.</span><span class="n">CRITIC</span><span class="p">),</span>
+                <span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">critic</span> <span class="o">=</span> <span class="n">CriticAgent</span><span class="p">(</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">critic_sys_msg</span><span class="p">,</span>
+                    <span class="n">mode_type</span><span class="p">,</span>
+                    <span class="o">**</span><span class="p">(</span><span class="n">critic_kwargs</span> <span class="ow">or</span> <span class="p">{}),</span>
+                <span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">critic</span> <span class="o">=</span> <span class="kc">None</span>
+
+<div class="viewcode-block" id="RolePlaying.init_chat"><a class="viewcode-back" href="../../../camel.agents.html#camel.agents.role_playing.RolePlaying.init_chat">[docs]</a>    <span class="k">def</span> <span class="nf">init_chat</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">AssistantChatMessage</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="n">ChatMessage</span><span class="p">]]:</span>
+<span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Initializes the chat by resetting both the assistant and user</span>
+<span class="sd">        agents, and sending the system messages again to the agents using</span>
+<span class="sd">        chat messages. Returns the assistant&#39;s introductory message and the</span>
+<span class="sd">        user&#39;s response messages.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            A tuple containing an `AssistantChatMessage` representing the</span>
+<span class="sd">            assistant&#39;s introductory message, and a list of `ChatMessage`s</span>
+<span class="sd">            representing the user&#39;s response messages.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assistant_agent</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">user_agent</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+
+        <span class="c1"># Send the system messages again to the agents using chat messages</span>
+        <span class="n">assistant_msg</span> <span class="o">=</span> <span class="n">AssistantChatMessage</span><span class="p">(</span>
+            <span class="n">role_name</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">assistant_sys_msg</span><span class="o">.</span><span class="n">role_name</span><span class="p">,</span>
+            <span class="n">content</span><span class="o">=</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">user_sys_msg</span><span class="o">.</span><span class="n">content</span><span class="si">}</span><span class="s2">. &quot;</span>
+                     <span class="s2">&quot;Now start to give me introductions one by one. &quot;</span>
+                     <span class="s2">&quot;Only reply with Instruction and Input.&quot;</span><span class="p">))</span>
+
+        <span class="n">user_msg</span> <span class="o">=</span> <span class="n">UserChatMessage</span><span class="p">(</span><span class="n">role_name</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">user_sys_msg</span><span class="o">.</span><span class="n">role_name</span><span class="p">,</span>
+                                   <span class="n">content</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">assistant_sys_msg</span><span class="o">.</span><span class="n">content</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">msgs</span><span class="p">,</span> <span class="n">terminated</span><span class="p">,</span> <span class="n">info</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">assistant_agent</span><span class="o">.</span><span class="n">step</span><span class="p">(</span><span class="n">user_msg</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">terminated</span> <span class="ow">or</span> <span class="n">msgs</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;Assistant agent terminated unexpectedly. Error info: </span><span class="si">{</span><span class="n">info</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">assistant_msg</span><span class="p">,</span> <span class="n">msgs</span></div>
+
+<div class="viewcode-block" id="RolePlaying.process_messages"><a class="viewcode-back" href="../../../camel.agents.html#camel.agents.role_playing.RolePlaying.process_messages">[docs]</a>    <span class="k">def</span> <span class="nf">process_messages</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">messages</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">ChatMessage</span><span class="p">],</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ChatMessage</span><span class="p">:</span>
+<span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Processes a list of chat messages, returning the processed message.</span>
+<span class="sd">        If multiple messages are provided and `with_critic_in_the_loop`</span>
+<span class="sd">        is `False`, raises a `ValueError`. If no messages are provided, also</span>
+<span class="sd">        raises a `ValueError`.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            msgs: A list of `ChatMessage`s to process.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            A single `ChatMessage` representing the processed message.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">messages</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;No messages to process.&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">messages</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="ow">and</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">with_critic_in_the_loop</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Got than one message to process. &quot;</span>
+                             <span class="sa">f</span><span class="s2">&quot;Num of messages: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">messages</span><span class="p">)</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">with_critic_in_the_loop</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">critic</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">processed_msg</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">critic</span><span class="o">.</span><span class="n">step</span><span class="p">(</span><span class="n">messages</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">processed_msg</span> <span class="o">=</span> <span class="n">messages</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+        <span class="k">return</span> <span class="n">processed_msg</span></div>
+
+<div class="viewcode-block" id="RolePlaying.step"><a class="viewcode-back" href="../../../camel.agents.html#camel.agents.role_playing.RolePlaying.step">[docs]</a>    <span class="k">def</span> <span class="nf">step</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">assistant_msg</span><span class="p">:</span> <span class="n">ChatMessage</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="n">Optional</span><span class="p">[</span><span class="n">ChatMessage</span><span class="p">],</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">],</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">]],</span>
+               <span class="n">Tuple</span><span class="p">[</span><span class="n">Optional</span><span class="p">[</span><span class="n">ChatMessage</span><span class="p">],</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">],</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">]]]:</span>
+<span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Advances the conversation by taking a message from the assistant,</span>
+<span class="sd">        processing it using the user agent, and then processing the resulting</span>
+<span class="sd">        message using the assistant agent. Returns a tuple containing the</span>
+<span class="sd">        resulting assistant message, whether or not the assistant agent</span>
+<span class="sd">        terminated the conversation, and any additional assistant information,</span>
+<span class="sd">        as well as a tuple containing the resulting user message, whether or</span>
+<span class="sd">        not the user agent terminated the conversation, and any additional user</span>
+<span class="sd">        information.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            assistant_msg: A `ChatMessage` representing the message from the</span>
+<span class="sd">                assistant.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            A tuple containing two tuples: the first tuple contains the</span>
+<span class="sd">            resulting assistant message, whether or not the assistant agent</span>
+<span class="sd">            terminated the conversation, and any additional assistant</span>
+<span class="sd">            information; the second tuple contains the resulting user message,</span>
+<span class="sd">            whether or not the user agent terminated the conversation, and</span>
+<span class="sd">            any additional user information.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">user_msgs</span><span class="p">,</span> <span class="n">user_terminated</span><span class="p">,</span> <span class="n">user_info</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">user_agent</span><span class="o">.</span><span class="n">step</span><span class="p">(</span>
+            <span class="n">assistant_msg</span><span class="o">.</span><span class="n">to_user_chat_message</span><span class="p">())</span>
+        <span class="k">if</span> <span class="n">user_terminated</span> <span class="ow">or</span> <span class="n">user_msgs</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">((</span><span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span> <span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">user_terminated</span><span class="p">,</span> <span class="n">user_info</span><span class="p">))</span>
+        <span class="n">user_msg</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">process_messages</span><span class="p">(</span><span class="n">user_msgs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">user_agent</span><span class="o">.</span><span class="n">update_messages</span><span class="p">(</span><span class="n">user_msg</span><span class="p">)</span>
+
+        <span class="p">(</span><span class="n">assistant_msgs</span><span class="p">,</span> <span class="n">assistant_terminated</span><span class="p">,</span>
+         <span class="n">assistant_info</span><span class="p">)</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">assistant_agent</span><span class="o">.</span><span class="n">step</span><span class="p">(</span>
+             <span class="n">user_msg</span><span class="o">.</span><span class="n">to_user_chat_message</span><span class="p">())</span>
+        <span class="k">if</span> <span class="n">assistant_terminated</span> <span class="ow">or</span> <span class="n">assistant_msgs</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">((</span><span class="kc">None</span><span class="p">,</span> <span class="n">assistant_terminated</span><span class="p">,</span> <span class="n">assistant_info</span><span class="p">),</span>
+                    <span class="p">(</span><span class="n">user_msg</span><span class="p">,</span> <span class="n">user_terminated</span><span class="p">,</span> <span class="n">user_info</span><span class="p">))</span>
+        <span class="n">assistant_msg</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">process_messages</span><span class="p">(</span><span class="n">assistant_msgs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assistant_agent</span><span class="o">.</span><span class="n">update_messages</span><span class="p">(</span><span class="n">assistant_msg</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="p">(</span><span class="n">assistant_msg</span><span class="p">,</span> <span class="n">assistant_terminated</span><span class="p">,</span> <span class="n">assistant_info</span><span class="p">),</span>
+            <span class="p">(</span><span class="n">user_msg</span><span class="p">,</span> <span class="n">user_terminated</span><span class="p">,</span> <span class="n">user_info</span><span class="p">),</span>
+        <span class="p">)</span></div></div>
+</pre></div>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Guohao Li, Hasan Abed Al Kader Hammoud, Hani Itani, Dmitrii Khizbullin, Bernard Ghanem
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2023, Camel AI team.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
